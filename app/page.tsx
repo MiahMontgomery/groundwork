@@ -3,34 +3,41 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-brown-950">
-      {/* Hero Section - Minimal, Software-like */}
-      <section className="border-b border-brown-800">
-        <div className="container-custom py-20">
+    <div className="min-h-screen bg-charcoal-950">
+      {/* Hero Section with seamless header transition */}
+      <section className="relative overflow-hidden">
+        {/* Seamless dark brown header that transitions into dots */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950 via-charcoal-950 to-charcoal-900">
+          <div className="absolute inset-0 halftone-dots opacity-40"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-charcoal-950 via-charcoal-950/80 to-transparent"></div>
+        </div>
+        
+        <div className="container-custom py-24 relative z-10">
           <div className="max-w-4xl">
-            <div className="mb-8">
-              <Image 
-                src="/logo.svg" 
-                alt="Ground Work Compliance" 
-                width={80} 
-                height={80}
-                className="mb-6"
-              />
+            {/* Badge */}
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-2 h-2 rounded-full bg-amber-500"></div>
+              <span className="px-3 py-1 bg-charcoal-800 border border-charcoal-700 rounded-full text-xs font-medium text-slate-300 uppercase tracking-wide">
+                Ontario Construction Compliance
+              </span>
             </div>
-            <h1 className="text-5xl font-medium text-brown-50 mb-6 leading-tight tracking-tight">
-              Construction compliance management for active job sites.
+            
+            {/* Main Headline - Bold, impactful font */}
+            <h1 className="text-6xl md:text-7xl font-bold text-slate-50 mb-6 leading-tight tracking-tight">
+              Build more.<br />
+              Paperwork less.
             </h1>
-            <p className="text-xl text-brown-300 mb-8 leading-relaxed max-w-2xl">
-              We manage submissions, renewals, and documentation for WSIB, ESA, building permits, and insurance — on your behalf.
+            
+            {/* Gold wording */}
+            <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed max-w-3xl">
+              We handle building permit packaging, submission, and tracking—so you can focus on the <span className="text-amber-400 font-medium">ground work</span>.
             </p>
-            <p className="text-brown-400 mb-10">
-              Designed for Ontario contractors and general contractors doing ground work.
-            </p>
+            
             <div className="flex gap-4">
-              <Link href="/contact" className="px-6 py-3 bg-warm-600 text-white rounded hover:bg-warm-700 transition-colors cursor-pointer">
+              <Link href="/contact" className="px-6 py-3 bg-navy-700 text-slate-50 rounded hover:bg-navy-600 transition-colors cursor-pointer font-medium">
                 Request Evaluation
               </Link>
-              <Link href="/login" className="px-6 py-3 border border-brown-700 text-brown-300 rounded hover:border-brown-600 hover:text-brown-200 transition-colors cursor-pointer">
+              <Link href="/login" className="px-6 py-3 border border-steel-700 text-slate-300 rounded hover:border-steel-600 hover:text-slate-200 transition-colors cursor-pointer font-medium">
                 Login
               </Link>
             </div>
@@ -38,50 +45,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services - Simple List, Not Cards */}
-      <section className="border-b border-brown-800">
-        <div className="container-custom py-20">
-          <h2 className="text-2xl font-medium text-brown-50 mb-12">Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
-            <div>
-              <h3 className="text-lg font-medium text-brown-50 mb-4">Compliance Operations</h3>
-              <p className="text-brown-300 mb-4 leading-relaxed">
-                Administrative support for contractors and GCs.
-              </p>
-              <ul className="space-y-2 text-brown-400 text-sm">
-                <li>WSIB clearances</li>
-                <li>ESA permit coordination</li>
-                <li>Building permit submissions</li>
-                <li>Insurance documentation</li>
-                <li>Subcontractor compliance collection</li>
-                <li>Expiry tracking & renewals</li>
-                <li>Audit preparation</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-brown-50 mb-4">Project Management</h3>
-              <p className="text-brown-300 mb-4 leading-relaxed">
-                Centralized tracking and coordination for active job sites.
-              </p>
-              <ul className="space-y-2 text-brown-400 text-sm">
-                <li>Project compliance tracking</li>
-                <li>Multi-site management</li>
-                <li>Documentation coordination</li>
-                <li>Status reporting</li>
-                <li>Audit trail maintenance</li>
-              </ul>
+      {/* How We Operate - with more dot detail as you scroll */}
+      <section className="relative border-t border-charcoal-800">
+        <div className="absolute inset-0 halftone-dots opacity-30"></div>
+        <div className="container-custom py-24 relative z-10">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-8">How We Operate</h2>
+            
+            <div className="space-y-8 text-slate-300">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-50 mb-3">Building Permit Operations</h3>
+                <p className="leading-relaxed mb-4">
+                  Ground Work Compliance is <strong className="text-slate-50">one thing</strong>: Building Permit Operations for Ontario contractors and designers.
+                </p>
+                <p className="leading-relaxed">
+                  We provide <strong className="text-slate-50">permit packaging + submission + tracking + resubmissions + close-out</strong> so contractors can keep building instead of drowning in municipal process.
+                </p>
+              </div>
+              
+              <div className="border-l-2 border-navy-700 pl-6">
+                <h4 className="text-lg font-semibold text-slate-50 mb-3">What We Handle</h4>
+                <ul className="space-y-2 text-slate-300">
+                  <li>• Provincial permit application preparation</li>
+                  <li>• Municipal submission coordination</li>
+                  <li>• Review loop management (RFIs, comments, resubmissions)</li>
+                  <li>• Permit tracking and status updates</li>
+                  <li>• Close-out documentation</li>
+                </ul>
+              </div>
+              
+              <div className="border-l-2 border-navy-700 pl-6">
+                <h4 className="text-lg font-semibold text-slate-50 mb-3">Who We Serve</h4>
+                <ul className="space-y-2 text-slate-300">
+                  <li>• Small–mid contractors doing repeated permit work</li>
+                  <li>• Designers / BCIN firms who produce drawings but hate permit admin</li>
+                  <li>• Permit expediters (we're the tool + ops wrapper)</li>
+                  <li>• GCs who want a clean pipeline across multiple projects</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Notice - Minimal */}
-      <section className="border-b border-brown-800">
-        <div className="container-custom py-12">
+      {/* Authorization Notice */}
+      <section className="relative border-t border-charcoal-800">
+        <div className="absolute inset-0 halftone-dots opacity-20"></div>
+        <div className="container-custom py-16 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-sm text-brown-400 leading-relaxed">
-              <strong className="text-brown-300">Notice:</strong> We act as an authorized administrative agent. All approvals and certifications are issued by the relevant authorities. We do not guarantee approvals or outcomes.
-            </p>
+            <div className="bg-charcoal-900 border-l-4 border-amber-500 p-6">
+              <p className="text-sm text-slate-300 leading-relaxed">
+                <strong className="text-slate-50">Notice:</strong> We act as an authorized administrative agent for building permit submissions. All approvals are issued by the relevant municipalities. We do not provide engineering, design, or code certification services. We do not guarantee permit issuance.
+              </p>
+            </div>
           </div>
         </div>
       </section>
