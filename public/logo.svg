@@ -1,0 +1,59 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Top arc path for G W C -->
+    <path id="topArc" d="M 30 55 A 70 70 0 0 1 170 55" fill="none"/>
+    <!-- Bottom arc path for text -->
+    <path id="bottomArc" d="M 30 165 A 70 70 0 0 1 170 165" fill="none"/>
+  </defs>
+  
+  <!-- Outer dark gray/black thick border -->
+  <circle cx="100" cy="100" r="99" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+  
+  <!-- Light gray ring -->
+  <circle cx="100" cy="100" r="92" fill="#e5e7eb"/>
+  
+  <!-- Inner dark gray/black thin border -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Inner light gray circle background -->
+  <circle cx="100" cy="100" r="85" fill="#e5e7eb"/>
+  
+  <!-- Top curved dark banner for G W C -->
+  <path d="M 25 50 Q 100 30, 175 50 Q 100 70, 25 50 Z" fill="#1a1a1a"/>
+  
+  <!-- G W C text in top banner (using textPath for curve) -->
+  <text font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e5e7eb" letter-spacing="8">
+    <textPath href="#topArc" startOffset="20%">G</textPath>
+    <textPath href="#topArc" startOffset="45%">W</textPath>
+    <textPath href="#topArc" startOffset="70%">C</textPath>
+  </text>
+  
+  <!-- Central building with grid windows -->
+  <rect x="80" y="100" width="40" height="50" fill="#1a1a1a"/>
+  <!-- Window grid - horizontal lines -->
+  <line x1="80" y1="110" x2="120" y2="110" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="80" y1="120" x2="120" y2="120" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="80" y1="130" x2="120" y2="130" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="80" y1="140" x2="120" y2="140" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- Window grid - vertical lines -->
+  <line x1="90" y1="100" x2="90" y2="150" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="100" y1="100" x2="100" y2="150" stroke="#e5e7eb" stroke-width="1.5"/>
+  <line x1="110" y1="100" x2="110" y2="150" stroke="#e5e7eb" stroke-width="1.5"/>
+  
+  <!-- Left building with vertical stripes -->
+  <rect x="50" y="110" width="20" height="40" fill="#1a1a1a"/>
+  <line x1="55" y1="110" x2="55" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  <line x1="60" y1="110" x2="60" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  <line x1="65" y1="110" x2="65" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  
+  <!-- Right building with vertical stripes -->
+  <rect x="130" y="110" width="20" height="40" fill="#1a1a1a"/>
+  <line x1="135" y1="110" x2="135" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  <line x1="140" y1="110" x2="140" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  <line x1="145" y1="110" x2="145" y2="150" stroke="#e5e7eb" stroke-width="2.5"/>
+  
+  <!-- Bottom curved text - GROUND WORK COMPLIANCE -->
+  <text font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#e5e7eb" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="0%">GROUND WORK COMPLIANCE</textPath>
+  </text>
+</svg>
